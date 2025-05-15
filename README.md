@@ -47,3 +47,15 @@ Ferrish is:
 
 ---
 ## im no expert but jesus christ this project is too ambitious
+
+## Commit Naming Conventions
+| Type       | Purpose                                                                     |
+| ---------- | --------------------------------------------------------------------------- |
+| `feat`     | **New feature** (e.g. REPL, autocomplete, config loading)                   |
+| `fix`      | **Bug fix** or incorrect behavior                                           |
+| `refactor` | **Code improvement** that doesn’t change behavior (e.g. cleanup, structure) |
+| `perf`     | **Performance improvement**                                                 |
+| `style`    | **Code style changes** (formatting, spacing, no logic change)               |
+| `test`     | **Add or update tests**                                                     |
+| `docs`     | **Documentation updates** (README, inline docs, etc.)                       |
+| `chore`    | **Project chores** (build system, tooling, dependencies, infra)             |
