@@ -1,61 +1,32 @@
-# 🦀 Ferrish
+# Ferrish 🐚
 
-**Ferrish** is a fast, customizable, POSIX-style shell written in Rust — blending the scripting power of Bash with the interactivity of Zsh.
+**Ferrish** is a minimal shell written in Rust.
 
-Inspired by the flexibility of modern shells and built from the ground up, Ferrish is a personal tool, a systems playground, and a long-term learning project.
+At its core, Ferrish works just like any other shell — it lets you run commands, move around your system, and use the terminal. But unlike other shells, Ferrish doesn’t come with any built-in “smart” features, themes, or extra tools.
 
----
+It’s just a shell.
 
-## Vision
+## 🧠 Philosophy
 
-Ferrish is:
-- A minimal core shell (REPL) for parsing and executing commands
-- A bridge between **scriptability** (Bash) and **interactivity** (Zsh)
-- A future extensible system with plugins, themes, and configuration
-- A personal learning journey into system programming with Rust
+Other shells (like Bash, Zsh, or Fish) each have their own unique features, quirks, and built-in behaviors. Ferrish doesn’t.
 
----
+Instead, **Ferrish stays minimal** — and lets *you* decide what features to add by installing plugins.
 
-## Goals
+> Think of Ferrish as a blank canvas.  
+> The core does the basics. Everything else is up to you.
 
-- Build a working shell prototype from scratch in Rust
-- Support common shell behaviors (`cd`, `ls`, pipes, redirection)
-- Create a prompt system and basic scripting
-- Integrate smart completion, history, and config loading
-- Experiment with plugin architecture and shell extensions
+## 🔍 What Makes It Different?
 
----
+- 🚫 No built-in bloat
+- ✅ Just the basics: input, output, command execution
+- 🔌 Add features through plugins (coming soon)
+- 🛠 Written in Rust for clarity, safety, and performance
 
-## Feature Comparison: Bash vs Zsh vs Ferrish
+## 🚧 Roadmap
 
-| Feature / Behavior         | **Bash**           | **Zsh**            | **Ferrish** (Goal)                      |
-|---------------------------|--------------------|--------------------|-----------------------------------------|
-| 🧱 POSIX compliance        | ✅ Yes             | ⚠️ Mostly           | ✅ Yes – core aligned w/ POSIX          |
-| 🔁 Scriptability           | ✅ Widely used     | ⚠️ Less common      | ✅ Full support (sh-like scripting)     |
-| 🧠 Interactivity features  | Basic              | ✅ Advanced         | ✅ Smart completion, better input UX    |
-| 🧠 Command history         | Simple             | ✅ Shared + smart   | ✅ Persistent, searchable                |
-| 🎯 Built-in commands       | ✅ Core (`cd`, etc) | ✅ Core + extras     | ✅ Minimal core built-ins first         |
-| 🔌 Plugin system           | ❌ Manual config   | ✅ Oh My Zsh        | ✅ Optional extensions, custom scripts  |
-| 🎨 Prompt customization    | Good               | ✅ Theme-friendly   | ✅ Dynamic, colorful, config-based      |
-| 📦 Config file             | `.bashrc`          | `.zshrc`           | ✅ `~/.ferrishrc` + TOML/YAML support   |
-| 🧰 Autocompletion          | Partial             | ✅ Extensive        | ✅ Path + command aware                 |
-| 📂 Globbing support        | ✅ Standard         | ✅ Extended         | ✅ Planned (better file matching)       |
-| 🖱 Mouse/keyboard UX       | ❌ None             | ❌ Minimal          | ✅ (via Crossterm in terminal mode)     |
-| 📜 Extensible scripting    | ✅ Shell scripts    | ✅ Shell scripts    | ✅ Rust plugin API / shell extensions   |
-| ⚡ Speed / Performance     | ✅ Solid            | ⚠️ Slower w/ plugins| ✅ Rust-native, fast by default         |
-
-
----
-## im no expert but jesus christ this project is too ambitious
-
-## Commit Naming Conventions
-| Type       | Purpose                                                                     |
-| ---------- | --------------------------------------------------------------------------- |
-| `feat`     | **New feature** (e.g. REPL, autocomplete, config loading)                   |
-| `fix`      | **Bug fix** or incorrect behavior                                           |
-| `refactor` | **Code improvement** that doesn’t change behavior (e.g. cleanup, structure) |
-| `perf`     | **Performance improvement**                                                 |
-| `style`    | **Code style changes** (formatting, spacing, no logic change)               |
-| `test`     | **Add or update tests**                                                     |
-| `docs`     | **Documentation updates** (README, inline docs, etc.)                       |
-| `chore`    | **Project chores** (build system, tooling, dependencies, infra)             |
+- [x] REPL loop (type a command, run it)
+- [ ] Command history
+- [ ] Basic config system
+- [ ] Plugin loader
+- [ ] Define plugin structure (e.g. manifest + hooks)
+- [ ] Plugin examples (prompt, alias, git info, etc.)
